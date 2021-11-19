@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AgregarSensorActivity"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lista de sensores"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.009"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.037" />
+
+    <Spinner
+        android:id="@+id/spinner_sensores"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/tipo_sensor_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Tipo de sensor"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_sensores"
+        tools:layout_editor_absoluteX="83dp" />
+
+    <EditText
+        android:id="@+id/valor_sensor_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Valor"
+        app:layout_constraintTop_toBottomOf="@+id/tipo_sensor_input"
+        tools:layout_editor_absoluteX="68dp" />
+
+    <EditText
+        android:id="@+id/observacion_sensor_input"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Observaciones"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        app:layout_constraintTop_toBottomOf="@+id/valor_sensor_input"
+        tools:layout_editor_absoluteX="18dp" />
+
+    <Button
+        android:id="@+id/guardar_sensor_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Agregar Sensor"
+        app:layout_constraintTop_toBottomOf="@+id/observacion_sensor_input"
+        tools:layout_editor_absoluteX="137dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

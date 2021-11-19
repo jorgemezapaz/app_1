@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActualizarSensorActivity"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/tipo_sensor_input_update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:enabled="false"
+        android:hint="Tipo de sensor"
+        android:inputType="textPersonName"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="83dp" />
+
+    <EditText
+        android:id="@+id/valor_sensor_input_update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Valor"
+        app:layout_constraintTop_toBottomOf="@+id/tipo_sensor_input_update"
+        tools:layout_editor_absoluteX="68dp"
+        android:enabled="false"/>
+
+    <EditText
+        android:id="@+id/observacion_sensor_input_update"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Observaciones"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        app:layout_constraintTop_toBottomOf="@+id/valor_sensor_input_update"
+        tools:layout_editor_absoluteX="18dp" />
+
+    <Button
+        android:id="@+id/actualizar_sensor_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Actualizar Sensor"
+        app:layout_constraintTop_toBottomOf="@+id/observacion_sensor_input_update"
+        tools:layout_editor_absoluteX="137dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Eliminar"
+        app:layout_constraintTop_toBottomOf="@+id/actualizar_sensor_button"
+        tools:layout_editor_absoluteX="126dp"
+        android:onClick="eliminarRegistro"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
